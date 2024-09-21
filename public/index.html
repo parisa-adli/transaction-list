@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسک دوره جاوااسکریپت</title>
+  <link rel="stylesheet" href="./styles/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+    integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/27.0.3/font-face.css"
+    integrity="sha512-ZHFuHiK3EA1uh2tx7nB0j9HyXR/IAFW24KVNFGjY8QIjtDKHmcowjUyObXF40wYrG25+kECHEbH8rL+HbvRwYA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <main class="container main">
+    <div class="nav-header">
+      <h2 class="nav-header__title">لیست تراکنش ها</h2>
+      <div class="hidden nav-header__search">
+        <input type="text" name="search" id="search" placeholder="جستجو تراکنش...">
+        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+      </div>
+    </div>
+    <section class="transaction">
+      <button class=" transaction__btn">بارگذاری تراکنش ها</button>
+      <div class="hidden transaction__content">
+        <p class="table-title">لیست تراکنش های شما</p>
+        <div class="transaction__container">
+          <table class="transaction__table">
+            <thead>
+              <tr>
+                <th>ردیف</th>
+                <th>نوع تراکنش</th>
+                <th>مبلغ
+                  <i class="fa-solid fa-chevron-up" id="sort-price"></i>
+                </th>
+                <th>شماره پیگیری</th>
+                <th>تاریخ تراکنش
+                  <i class="fa-solid fa-chevron-up" id="sort-date"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="table-row-data">
+              <!-- <tr>
+                <td>1</td>
+                <td class="green">افزایش اعتبار</td>
+                <td>1,000,000</td>
+                <td>123126411</td>
+                <td>12/08/1399 ساعت: 12:32</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td class="red">برداشت از حساب</td>
+                <td>10,000,000</td>
+                <td>123126411</td>
+                <td>12/08/1399 ساعت: 12:32</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td class="green">افزایش اعتبار</td>
+                <td>1,000,000</td>
+                <td>123126411</td>
+                <td>12/08/1399 ساعت: 12:32</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
