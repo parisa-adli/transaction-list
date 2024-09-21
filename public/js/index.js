@@ -11,15 +11,6 @@ search.addEventListener("input", (e) => searchData(e));
 sortPriceChevron.addEventListener("click", sortPrice);
 sortDateChevron.addEventListener("click", sortDate);
 
-async function getData() {
-  const { data } = await axios.get("http://localhost:3000/transactions");
-  // console.log(data);
-  transactionBtn.classList.toggle("hidden");
-  transactionList.classList.toggle("hidden");
-  searchDiv.classList.toggle("hidden");
-  fillTable(data);
-}
-
 function fillTable(data) {
   let result = "";
   data.forEach((item) => {
@@ -45,6 +36,15 @@ function fillTable(data) {
     </tr>`;
   });
   tableRowsData.innerHTML = result;
+}
+
+async function getData() {
+  const { data } = await axios.get("http://localhost:3000/transactions");
+  // console.log(data);
+  transactionBtn.classList.toggle("hidden");
+  transactionList.classList.toggle("hidden");
+  searchDiv.classList.toggle("hidden");
+  fillTable(data);
 }
 
 async function searchData(e) {
